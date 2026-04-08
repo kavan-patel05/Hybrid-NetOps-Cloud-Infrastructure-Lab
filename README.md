@@ -22,11 +22,14 @@ The lab focuses on real-world network operations, troubleshooting, and incident 
 
 # Technologies Used
 
-* Cisco Packet Tracer
-* Networking (VLANs, STP, ARP, Routing)
-* Linux (Ubuntu Server)
-* AWS (basic cloud setup)
-* Python (network monitoring)
+ Technology              Purpose 
+ Cisco Packet Tracer     Network simulation 
+ Cisco IOS CLI           Device configuration 
+ VirtualBox              Virtualization platform 
+ Ubuntu Server 24.04     Linux server OS 
+ AWS Free Tier           Cloud infrastructure 
+ Python 3                Monitoring automation 
+ GitHub                  Version control and portfolio 
 
 ---
 
@@ -60,10 +63,29 @@ The lab focuses on real-world network operations, troubleshooting, and incident 
 
 # Project Structure
 
-* `/topology` – Network diagrams
-* `/configs` – Device configurations
-* `/monitoring` – Python scripts
-* `/troubleshooting` – Issue scenarios & fixes
+Hybrid-NetOps-Cloud-Infrastructure-Lab/
+│
+├── configs/
+│   ├── R1-config.txt        # Router running configuration
+│   ├── Sw_Core-config.txt   # Core switch configuration
+│   ├── Sw_Office-config.txt # Office access switch configuration
+│   ├── Sw_IT-config.txt     # IT access switch configuration
+│   └── Sw_Guest-config.txt  # Guest access switch configuration
+│
+├── docs/
+│   └── network-overview.txt # Network design documentation
+│
+├── monitoring/
+│   └── monitor.py           # Python NOC monitoring script
+│
+├── topology/
+│   ├── NOC_Lab_Enterprise.pkt      # Cisco Packet Tracer file
+│   └── NOC_Lab_Enterprise_Topology.png  # Network diagram
+│
+├── troubleshooting/
+│   └── (scenarios coming in Phase 2)
+│
+└── README.md
 
 ---
 
