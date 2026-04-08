@@ -1,1 +1,45 @@
+NETWORK OVERVIEW
 
+
+Lab Name: Hybrid NetOps & Cloud Infrastructure Lab
+Purpose:  Simulate enterprise NOC environment for 
+          skill development and portfolio building
+
+DESIGN DECISIONS
+
+1. Hierarchical design chosen (Router > Core > Access)
+   Reason: Mirrors real enterprise architecture
+   
+2. VLANs numbered by 10s (10, 20, 30, 40)
+   Reason: Leaves room for expansion within each group
+   
+3. All inter-switch links configured as trunks
+   Reason: Carries multiple VLANs between switches
+   
+4. End device ports configured as access ports
+   Reason: Security — prevents VLAN hopping attacks
+   
+5. Sub-interfaces used on R1 for inter-VLAN routing
+   Reason: One physical port handles all VLAN routing
+   Known as Router-on-a-Stick design pattern
+
+ADDRESSING SCHEME
+
+VLAN 10 → 192.168.10.0/24 (Office-HR)
+VLAN 20 → 192.168.20.0/24 (IT-Dept)
+VLAN 30 → 192.168.30.0/24 (Guest)
+VLAN 40 → 192.168.40.0/24 (Servers)
+
+Convention: VLAN number matches third octet of IP
+Example: VLAN 10 → 192.168.10.x
+Reason: Easy to identify which VLAN a device belongs 
+        to just by looking at its IP address
+
+CONNECTIVITY VERIFIED
+
+PC-HR1  → PC-HR2    (same VLAN)  ✅
+PC-HR1  → PC-IT1    (cross VLAN) ✅
+PC-HR1  → PC-GUEST1 (cross VLAN) ✅
+PC-HR1  → SRV-MAIN  (cross VLAN) ✅
+PC-IT1  → SRV-MAIN  (cross VLAN) ✅
+GUEST1  → SRV-MAIN  (cross VLAN) ✅
