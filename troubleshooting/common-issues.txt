@@ -1,0 +1,31 @@
+TROUBLESHOOTING SCENARIOS
+
+
+ISSUE 1 — Ping fails between VLANs
+Symptoms: PC-HR1 cannot ping PC-IT1
+Steps:
+1. Check VLAN assignment on access ports
+   show vlan brief
+2. Check trunk links between switches
+   show interfaces trunk
+3. Check router sub-interfaces are up
+   show ip interface brief
+4. Check PC default gateway matches router sub-interface IP
+Root Cause: Usually trunk port not configured or 
+            wrong VLAN on access port
+
+ISSUE 2 — show running-config appears empty
+Symptoms: CLI shows no configuration after reload
+Steps:
+1. Try show startup-config instead
+2. Try show vlan brief to confirm VLANs exist
+3. Run copy running-config startup-config 
+   before saving .pkt file next time
+Root Cause: Packet Tracer does not always persist 
+            running-config across file saves
+
+ISSUE 3 — First ping always fails (1 packet lost)
+Symptoms: Sent=4 Received=3 Lost=1 on first ping
+Explanation: Normal behaviour — first packet triggers
+             ARP resolution which takes time
+Fix: Ping again — second attempt shows 0% loss
