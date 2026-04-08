@@ -1,3 +1,4 @@
+# R1 Interface Summary (ROAS)
 Router#show ip interface brief
 Interface                 IP-Address      OK?   Method   Status                   Protocol 
 GigabitEthernet0/0/0      unassigned      YES   unset    up                       up 
