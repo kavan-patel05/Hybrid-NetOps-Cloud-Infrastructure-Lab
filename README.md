@@ -185,7 +185,7 @@ Deployed Ubuntu Server 24.04 LTS in VirtualBox:
 
 Deployed and explored cloud infrastructure on AWS Free Tier:
 
-- EC2 instance provisioned (Amazon Linux 2023, t2.micro)
+- EC2 instance provisioned (Amazon Linux 2023, t3.micro)
 - VPC structure explored — subnets, route tables, internet gateway
 - Security group rules reviewed (inbound/outbound traffic control)
 - Billing alerts configured to prevent unexpected charges
